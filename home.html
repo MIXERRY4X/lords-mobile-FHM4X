@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Guild FHM4X</title>
+<title>War Room</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,53 +11,63 @@
 <h1>🏰 FHM4X WAR ROOM</h1>
 
 <div class="menu">
-<button onclick="show('guide')">📘 สูตรเล่น</button>
-<button onclick="show('war')">⚔️ สงคราม</button>
-<button onclick="show('guild')">👥 กิลด์</button>
 <button onclick="show('calc')">🧮 สูตรแรนเสา</button>
 </div>
 
-<!-- สูตรเล่น -->
-<div id="guide" class="box">
-<h2>สูตรเล่นพื้นฐาน</h2>
-<ul>
-<li>ทำเควสทุกวัน</li>
-<li>ฟาร์มตลอด</li>
-<li>อัป T4 ก่อน</li>
-</ul>
-</div>
+<div id="calc" class="box">
 
-<!-- สงคราม -->
-<div id="war" class="box" style="display:none">
-<h2>สูตรตี</h2>
-<ul>
-<li>ใช้ 442</li>
-<li>Scout ก่อนตี</li>
-<li>รวม Rally</li>
-</ul>
-</div>
+<h2>ตั้งค่าหลัก</h2>
 
-<!-- กิลด์ -->
-<div id="guild" class="box" style="display:none">
-<h2>ข้อมูลกิลด์</h2>
-<p>เวลา Rally 20:00</p>
-<p>DN ทุก 3 ชม.</p>
-</div>
+<p>จำนวนทหารรวมในเสา</p>
+<input id="totalTroop" type="number" value="2000000">
 
-<!-- เครื่องคำนวณ -->
-<div id="calc" class="box" style="display:none">
-<h2>🧮 สูตรแรนเสา</h2>
+<hr>
 
-<p>จำนวนทหารทั้งหมด</p>
-<input id="troop" type="number">
+<h2>โหมดคำนวณ</h2>
+<button onclick="mode='manual'">พิมพ์เอง</button>
+<button onclick="mode='percent'">โหมด %</button>
 
-<p>ต้องการส่ง %</p>
-<input id="percent" type="number">
+<hr>
+
+<h2>ทหารคนนำ</h2>
+
+<p>ประเภท</p>
+<select id="type">
+<option value="inf">ราบ</option>
+<option value="cav">ม้า</option>
+<option value="rng">ธนู</option>
+</select>
+
+<p>Tier</p>
+<select id="tier">
+<option value="1">T1</option>
+<option value="2">T2</option>
+<option value="3">T3</option>
+<option value="4">T4</option>
+<option value="5">T5</option>
+</select>
+
+<p>จำนวน</p>
+<input id="lead" type="number" value="500000">
+
+<hr>
+
+<h2>สัดส่วนผู้ตาม (%)</h2>
+
+<p>ราบ %</p>
+<input id="infp" type="number" value="400">
+
+<p>ม้า %</p>
+<input id="cavp" type="number" value="300">
+
+<p>ธนู %</p>
+<input id="rngp" type="number" value="300">
 
 <br><br>
 <button onclick="calc()">คำนวณ</button>
 
-<h3 id="result"></h3>
+<h2 id="out"></h2>
+
 </div>
 
 <script src="script.js"></script>
