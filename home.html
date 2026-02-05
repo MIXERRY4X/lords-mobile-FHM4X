@@ -1,72 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>War Room</title>
+<title>เมนูหลัก</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>🏰 FHM4X WAR ROOM</h1>
+<div class="menu-container">
 
-<div class="menu">
-<button onclick="show('calc')">🧮 สูตรแรนเสา</button>
-</div>
+<h1>⚔️ ศูนย์บัญชาการกิลด์</h1>
 
-<div id="calc" class="box">
+<button onclick="goAttack()">🏠 การตีบ้าน</button>
 
-<h2>ตั้งค่าหลัก</h2>
+<button onclick="goRally()">🚩 การชนเสา</button>
 
-<p>จำนวนทหารรวมในเสา</p>
-<input id="totalTroop" type="number" value="2000000">
-
-<hr>
-
-<h2>โหมดคำนวณ</h2>
-<button onclick="mode='manual'">พิมพ์เอง</button>
-<button onclick="mode='percent'">โหมด %</button>
-
-<hr>
-
-<h2>ทหารคนนำ</h2>
-
-<p>ประเภท</p>
-<select id="type">
-<option value="inf">ราบ</option>
-<option value="cav">ม้า</option>
-<option value="rng">ธนู</option>
-</select>
-
-<p>Tier</p>
-<select id="tier">
-<option value="1">T1</option>
-<option value="2">T2</option>
-<option value="3">T3</option>
-<option value="4">T4</option>
-<option value="5">T5</option>
-</select>
-
-<p>จำนวน</p>
-<input id="lead" type="number" value="500000">
-
-<hr>
-
-<h2>สัดส่วนผู้ตาม (%)</h2>
-
-<p>ราบ %</p>
-<input id="infp" type="number" value="400">
-
-<p>ม้า %</p>
-<input id="cavp" type="number" value="300">
-
-<p>ธนู %</p>
-<input id="rngp" type="number" value="300">
-
-<br><br>
-<button onclick="calc()">คำนวณ</button>
-
-<h2 id="out"></h2>
+<button onclick="goGuild()">🎯 กิลด์เฟส</button>
 
 </div>
 
