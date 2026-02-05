@@ -2,44 +2,64 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Guild War Room</title>
-
-<style>
-body{
-  background:#020617;
-  color:white;
-  font-family:Arial;
-  padding:20px;
-}
-
-.box{
-  background:#111827;
-  padding:15px;
-  margin:15px 0;
-  border-radius:12px;
-}
-</style>
-
+<title>Guild FHM4X</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>🏰 Guild War Room</h1>
+<h1>🏰 FHM4X WAR ROOM</h1>
 
-<div class="box">
-<h3>📢 ตารางตีเมือง</h3>
-<p>20:00 รวมพล</p>
-<p>21:00 ตี K123</p>
+<div class="menu">
+<button onclick="show('guide')">📘 สูตรเล่น</button>
+<button onclick="show('war')">⚔️ สงคราม</button>
+<button onclick="show('guild')">👥 กิลด์</button>
+<button onclick="show('calc')">🧮 สูตรแรนเสา</button>
 </div>
 
-<div class="box">
-<h3>🐉 Darknest</h3>
-<p>DN5 เปิด 22:00</p>
+<!-- สูตรเล่น -->
+<div id="guide" class="box">
+<h2>สูตรเล่นพื้นฐาน</h2>
+<ul>
+<li>ทำเควสทุกวัน</li>
+<li>ฟาร์มตลอด</li>
+<li>อัป T4 ก่อน</li>
+</ul>
 </div>
 
-<div class="box">
-<h3>📍 พิกัดศัตรู</h3>
-<p>123 : 456</p>
+<!-- สงคราม -->
+<div id="war" class="box" style="display:none">
+<h2>สูตรตี</h2>
+<ul>
+<li>ใช้ 442</li>
+<li>Scout ก่อนตี</li>
+<li>รวม Rally</li>
+</ul>
 </div>
 
+<!-- กิลด์ -->
+<div id="guild" class="box" style="display:none">
+<h2>ข้อมูลกิลด์</h2>
+<p>เวลา Rally 20:00</p>
+<p>DN ทุก 3 ชม.</p>
+</div>
+
+<!-- เครื่องคำนวณ -->
+<div id="calc" class="box" style="display:none">
+<h2>🧮 สูตรแรนเสา</h2>
+
+<p>จำนวนทหารทั้งหมด</p>
+<input id="troop" type="number">
+
+<p>ต้องการส่ง %</p>
+<input id="percent" type="number">
+
+<br><br>
+<button onclick="calc()">คำนวณ</button>
+
+<h3 id="result"></h3>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
