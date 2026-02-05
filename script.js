@@ -56,3 +56,15 @@ function goRally(){
 function goGuild(){
     alert("หน้ากิลด์เฟส ยังไม่ทำ");
 }
+
+function goAttack(){
+    alert("หน้าการตีบ้าน");
+}
+
+function goRally(){
+    window.location.href="rally.html";
+}
+
+function goGuild(){
+    alert("หน้ากิลด์เฟส");
+}
