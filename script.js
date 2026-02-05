@@ -16,3 +16,17 @@ button{
   color:white;
   border:none;
 }
+
+function checkPass(){
+
+  var password = document.getElementById("pass").value;
+
+  if(password === "1234"){
+    document.getElementById("msg").innerHTML = "รหัสถูกต้อง";
+    window.location.href = "home.html"; 
+  } 
+  else{
+    document.getElementById("msg").innerHTML = "รหัสผิด";
+  }
+
+}
