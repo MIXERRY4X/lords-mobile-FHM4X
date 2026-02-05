@@ -44,3 +44,15 @@ document.getElementById("out").innerHTML =
 "<br>รวม: " + (inf+cav+rng+lead);
 
 }
+
+function goAttack(){
+    alert("หน้าการตีบ้าน ยังไม่ทำ");
+}
+
+function goRally(){
+    window.location.href = "rally.html";
+}
+
+function goGuild(){
+    alert("หน้ากิลด์เฟส ยังไม่ทำ");
+}
