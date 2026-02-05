@@ -1,20 +1,46 @@
-function show(id){
-document.getElementById("guide").style.display="none";
-document.getElementById("war").style.display="none";
-document.getElementById("guild").style.display="none";
-document.getElementById("calc").style.display="none";
+var mode = "percent";
 
-document.getElementById(id).style.display="block";
+function show(id){
+document.getElementById("calc").style.display="block";
 }
 
 function calc(){
 
-var troop = document.getElementById("troop").value;
-var percent = document.getElementById("percent").value;
+var total = Number(document.getElementById("totalTroop").value);
+var lead = Number(document.getElementById("lead").value);
 
-var send = troop * percent / 100;
+var remain = total - lead;
 
-document.getElementById("result").innerHTML =
-"ควรส่ง: " + Math.floor(send);
+if(remain < 0){
+document.getElementById("out").innerHTML = "ทหารเกินเสา";
+return;
+}
+
+if(mode === "manual"){
+document.getElementById("out").innerHTML =
+"เหลือให้ใส่: " + remain;
+return;
+}
+
+var infp = Number(document.getElementById("infp").value);
+var cavp = Number(document.getElementById("cavp").value);
+var rngp = Number(document.getElementById("rngp").value);
+
+var sump = infp + cavp + rngp;
+
+if(sump > 1000){
+document.getElementById("out").innerHTML = "เปอร์เซ็นต์เกิน 1000";
+return;
+}
+
+var inf = Math.floor(remain * infp / 1000);
+var cav = Math.floor(remain * cavp / 1000);
+var rng = Math.floor(remain * rngp / 1000);
+
+document.getElementById("out").innerHTML =
+"ราบ: " + inf +
+"<br>ม้า: " + cav +
+"<br>ธนู: " + rng +
+"<br>รวม: " + (inf+cav+rng+lead);
 
 }
