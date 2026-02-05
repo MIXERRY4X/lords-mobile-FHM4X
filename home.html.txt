@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guild Lords Mobile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏰 เว็บลับกิลด์</h1>
+<p>ข้อมูลตีเมือง / Rally / แผนลับ</p>
+
+</body>
+</html>
